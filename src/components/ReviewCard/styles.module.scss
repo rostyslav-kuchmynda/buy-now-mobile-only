@@ -1,0 +1,37 @@
+@import "../../scss/base";
+
+.reviewCardWrap {
+  position: relative;
+  min-width: 27.2rem;
+  max-width: 27.2rem;
+  width: 27.2rem;
+  min-height: 34rem;
+  max-height: 34rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: $infoBgColor;
+  padding-block: 4rem;
+  padding-inline: 2.4rem;
+  border-radius: 2rem;
+
+  .reviewCardContent {
+    .platformLogo {
+      padding-block-end: 3rem;
+    }
+  }
+
+  .review,
+  .reviewerName {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+    letter-spacing: -0.025rem;
+  }
+
+  .review {
+    font-weight: 400;
+  }
+}

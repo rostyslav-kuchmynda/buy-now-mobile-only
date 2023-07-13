@@ -1,0 +1,16 @@
+{
+  "appVersion": "1.17.6",
+  "feedback": "https://walkmeinc.typeform.com/to/fPsnMuSd",
+  "feedbackId": "fPsnMuSd",
+  "actionBot": {
+    "url": "/actionbot/index.html"
+  },
+  "analytics": [
+    {
+      "vendor": "insights",
+      "keys": {
+        "apiKey": ""
+      }
+    }
+  ]
+}

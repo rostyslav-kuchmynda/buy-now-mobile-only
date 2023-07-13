@@ -1,0 +1,22 @@
+@import "../../scss/base";
+
+.layoutBody {
+  flex-grow: 1;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+
+  .footerBtnSpacing {
+    margin-block-start: 4rem;
+    margin-block-end: 8rem;
+  }
+
+  .footerContainerSpacing {
+    background-color: $white;
+    padding-block-start: 7rem;
+  }
+}

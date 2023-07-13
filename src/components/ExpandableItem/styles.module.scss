@@ -1,0 +1,134 @@
+@import "../../scss/base";
+
+.expandableItemWrap {
+  width: 24rem;
+
+  .resetStylesMU {
+    border: none;
+    box-shadow: none;
+  }
+
+  >img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  >p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+  }
+
+  .expandedColor {
+    color: $clarioBrandColor;
+    transition: all 200ms ease-in;
+
+    svg {
+      path {
+        fill: $clarioBrandColor;
+      }
+    }
+  }
+
+  .expandedFill {
+    path {
+      fill: $clarioBrandColor;
+      transition: all 200ms ease-in;
+    }
+
+  }
+
+  .expandedBackground {
+    background-color: $clarioBrandColor !important;
+    transition: all 200ms ease-in;
+  }
+
+  .fakeItem {
+    width: 2.8rem;
+    height: 2.8rem;
+    flex-shrink: 0;
+
+    margin-inline-end: 0.9rem;
+  }
+
+  .itemStepContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .itemStep {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      border: none;
+
+      width: 2.8rem;
+      height: 2.8rem;
+      flex-shrink: 0;
+      background-color: $darkFont;
+      text-align: center;
+
+      padding-inline: 0.9rem;
+      padding-block-end: 0.45rem;
+      padding-block-start: 0.2rem;
+
+      margin: 0;
+      margin-inline-end: 0.8rem;
+      color: $white;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 2.2rem;
+    }
+
+    // .itemStep:after {
+    //   content: ' ';
+    //   position: absolute;
+    //   border-left: 0.1rem dotted $darkFont;
+    //   top: 0.1rem;
+    //   right: 50%;
+    //   bottom: 0.1rem;
+    //   left: 50%;
+    //   height: 90%;
+    //   width: 0.1rem;
+    //   transform: scale(1, 2);
+    //   transform-origin: 50% -106%;
+    // }
+
+    // &:last-child .itemStep::after {
+    //   display: none;
+    // }
+
+    >p {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.2rem;
+    }
+  }
+
+  :global {
+    .MuiAccordionSummary-root {
+      padding: 0;
+    }
+
+    .MuiAccordionSummary-content {
+      margin: 0 !important;
+    }
+
+    .MuiAccordionDetails-root {
+      display: flex;
+      padding: 0rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.8rem;
+    }
+
+    .MuiAccordion-region {
+      display: flex;
+    }
+  }
+}

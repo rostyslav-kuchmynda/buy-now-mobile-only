@@ -1,0 +1,67 @@
+@import "../../scss/base";
+
+.featureCardWrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block-end: 5rem;
+
+  .illustrationWrap {
+    display: flex;
+    justify-content: center;
+    padding-block: 1.6rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 1.4rem;
+    margin-block-end: 3.5rem;
+    background: linear-gradient(180deg, rgba(230, 242, 254, 0.00) 0%, rgba(230, 242, 254, 0.90) 82.13%, #E6F2FE 100%);
+
+    >img {
+      height: 32rem;
+    }
+  }
+
+  .featureTitle {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    letter-spacing: -0.042rem;
+  }
+
+  .featureSubTitle {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    padding-block-end: 1.5rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bulletPointFeatureText {
+    font-weight: 700;
+  }
+
+  .bulletPointFeature {
+    padding-block-end: 1.5rem;
+
+    &:last-child {
+      padding-block-end: 0;
+    }
+
+
+    >img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

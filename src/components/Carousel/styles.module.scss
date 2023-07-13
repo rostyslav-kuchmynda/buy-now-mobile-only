@@ -1,0 +1,82 @@
+@import "../../scss/base";
+
+.carouselWrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block-start: 5.3rem;
+  padding-block-end: 4rem;
+
+  .carouselHeader {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-inline: 3.2rem;
+    padding-block-end: 3rem;
+
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: -0.045rem;
+  }
+
+  .carouselItemsContainer {
+    position: relative;
+  }
+
+  :global {
+    .splide__arrows--ltr {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+    }
+
+    .splide__arrow {
+      background-color: $white;
+      padding-inline: 1.2rem;
+      padding-block: 1.2rem;
+      width: 4.8rem;
+      height: 4.8rem;
+      opacity: 1;
+      filter: drop-shadow(0 0.6rem 1.2rem rgba(0, 0, 0, 0.10));
+
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+    }
+
+    .splide__arrow--prev {
+      left: -6rem;
+    }
+
+    .splide__arrow--next {
+      right: -6rem;
+    }
+
+    .splide__arrow:hover:not(:disabled) {
+      opacity: 1;
+    }
+  }
+
+
+
+  .carouselBtnWrap {
+    display: flex;
+    position: absolute;
+    gap: 1.6rem;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    .carouselBtn {
+      background-color: $white;
+      padding-inline: 1.2rem;
+      padding-block: 1.2rem;
+      border-radius: 50%;
+      filter: drop-shadow(0 0.6rem 1.2rem rgba(0, 0, 0, 0.10));
+    }
+  }
+}

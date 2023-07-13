@@ -1,0 +1,26 @@
+@import "../../scss/base";
+
+.stepsWrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-inline: 2.4rem;
+  padding-block-end: 3.7rem;
+
+  .stepsHeaderWrap {
+    margin-block-end: 1.9rem;
+  }
+
+  .stepsHeader {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: -0.045px;
+
+    >span {
+      color: $clarioBrandColor;
+    }
+  }
+}

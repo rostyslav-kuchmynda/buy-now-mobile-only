@@ -1,0 +1,45 @@
+@import "../../scss/base";
+
+.infoContainerWrap {
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 5.4rem;
+  padding-inline: 2.4rem;
+  background-color: $infoBgColor;
+
+  .infoTextWrap {
+    text-align: center;
+  }
+
+  .infoHeader {
+    color: $mainBlue;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    letter-spacing: -0.027rem;
+    margin: 0;
+    margin-block-end: 1rem;
+
+    >span {
+      display: block;
+    }
+
+    .darken {
+      color: $darkFont;
+    }
+  }
+
+  h2 {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: -0.016rem;
+    opacity: 0.69;
+  }
+
+  .infoContainerBtn {
+    margin-block: 3.5rem;
+  }
+}

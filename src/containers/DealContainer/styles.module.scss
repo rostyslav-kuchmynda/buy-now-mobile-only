@@ -1,0 +1,74 @@
+@import "../../scss/base";
+
+.dealContainerWrap {
+  background-color: $mainBlue;
+  padding-block-end: 3.8rem;
+  display: flex;
+  flex-direction: column;
+
+  .dealContainer {
+    padding-inline: 2.4rem;
+
+    .dealContainerHeading {
+      color: $white;
+      text-align: center;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 3rem;
+      letter-spacing: -0.045rem;
+      padding-block: 1.9rem;
+      margin: 0;
+
+    }
+  }
+
+  .subscriptionPlan {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1.6rem;
+    padding-block-start: 2.4rem;
+    padding-block-end: 3rem;
+    padding-inline: 2.4rem;
+    background-color: $white;
+
+    .getPlanSection {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .getPlanBtn {
+        width: 100%;
+      }
+    }
+
+    .warningInfo {
+      opacity: 0.5;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 1.2rem;
+      margin-block: 1.6rem;
+    }
+
+    .bulletPointGuaranteesText {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+    }
+
+    .bulletPointGuarantees {
+      padding-block-start: 0;
+      padding-block-end: 1.6rem;
+
+      >img {
+        width: 2.3rem;
+        height: 2.3rem;
+      }
+    }
+
+    .bulletPointGuarantees:last-child {
+      padding-block-end: 0;
+    }
+  }
+}

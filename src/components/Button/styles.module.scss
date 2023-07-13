@@ -1,0 +1,72 @@
+@import '../../scss/base';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $mainBlue;
+  border: none;
+  border-radius: 7rem;
+  padding-block: 0.9rem;
+  padding-inline: 3.2rem;
+  transition: all 200ms ease-out;
+  cursor: pointer;
+  height: fit-content;
+
+  &[disabled] {
+    background-color: $white;
+    border: 0.1rem solid transparentize($grey, 0.6);
+    cursor: not-allowed;
+
+    >span {
+      color: $grey;
+    }
+
+    &:active {
+      background-color: $white;
+      box-shadow: none;
+
+      >span {
+        color: $grey;
+      }
+    }
+  }
+
+
+  &:active {
+    background-color: lighten($mainBlue, 5%);
+    box-shadow: 0 1rem 2.8rem $shadowColor;
+
+    >span {
+      color: $white;
+    }
+  }
+
+  .label {
+    font-family: $fontPrimary;
+    white-space: nowrap;
+    transition: all 200ms ease-out;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.54px;
+    color: $white;
+  }
+
+
+
+  >i {
+    height: (1.4rem);
+    width: (1.4rem);
+    margin-inline-end: 0.6rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+}
