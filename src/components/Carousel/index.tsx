@@ -38,13 +38,15 @@ export const Carousel: React.FC = () => (
           type: 'loop',
           rewind: false,
           padding: '1.2rem',
+          gap: '1.2rem',
           pagination: false,
           trimSpace: true,
           arrows: true,
           focus: 'center',
           perPage: 1,
           direction: 'ltr',
-          width: '320px',
+          width: '32rem',
+          autoWidth: true,
           drag: false,
         }}
       >
