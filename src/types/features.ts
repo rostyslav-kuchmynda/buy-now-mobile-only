@@ -3,10 +3,19 @@ export type FeatureTypes = {
   bgColor: string;
   title: string;
   subTitle: string;
-  bullets: Array<BulletTypes>;
+  bullets: Array<BulletPointTypes>;
 };
 
-export type BulletTypes = {
-  icon: string;
-  desc: string;
+export type BulletPointTypes = {
+  icon?: string;
+  text: string;
+  textClassName?: string;
+  bulletClassName?: string;
+};
+
+export type BulletPointListTypes = {
+  list: Array<BulletPointTypes>;
+  textClassName?: string;
+  bulletClassName?: string;
+  defaultIcon?: boolean;
 };

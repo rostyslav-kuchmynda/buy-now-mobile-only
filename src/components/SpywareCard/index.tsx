@@ -1,8 +1,6 @@
-import { BulletPoint } from '../BulletPoint';
+import { BulletPointList } from '../BulletPointList';
 
 import classes from './styles.module.scss';
-
-import CheckMarkIcon from '../../images/icons/checkMark.svg';
 
 import DogVideo from '../../images/video/dog_video.mp4';
 
@@ -19,10 +17,6 @@ export const SpywareCard: React.FC = () => (
       <video src={DogVideo} autoPlay loop muted />
     </div>
     <h1 className={classes.spywareCardWrapTitle}>The anti-spy Clario app can:</h1>
-    <ul>
-      {CAPABILITIES.map(({ text }) => (
-        <BulletPoint key={text} text={text} icon={CheckMarkIcon} />
-      ))}
-    </ul>
+    <BulletPointList list={CAPABILITIES} defaultIcon />
   </section>
 );

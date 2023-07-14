@@ -3,7 +3,7 @@ import { Timer } from '../../components/Timer';
 import { PriceTag } from '../../components/PriceTag';
 import { Benefits } from '../../components/Benefits';
 import { Button } from '../../components/Button';
-import { BulletPoint } from '../../components/BulletPoint';
+import { BulletPointList } from '../../components/BulletPointList';
 
 import classes from './styles.module.scss';
 
@@ -12,8 +12,8 @@ import MoneyBackIcon from '../../images/icons/RefundPolicy/MoneyBack.svg';
 import DownloadsIcon from '../../images/icons/RefundPolicy/Downloads.svg';
 
 const GUARANTEES = [
-  { icon: MoneyBackIcon, desc: '30-day money-back guarantee' },
-  { icon: DownloadsIcon, desc: '100.000 + downloads' },
+  { icon: MoneyBackIcon, text: '30-day money-back guarantee' },
+  { icon: DownloadsIcon, text: '100.000 + downloads' },
 ];
 
 const PRICE = '$2.99';
@@ -35,17 +35,11 @@ export const DealContainer = forwardRef<HTMLDivElement>((_, ref) => (
         <div className={classes.getPlanSection}>
           <Button label={`Try for ${PRICE}`} className={classes.getPlanBtn} />
           <p className={classes.warningInfo}>{WARNING_INFO}</p>
-          <ul>
-            {GUARANTEES.map(({ icon, desc }) => (
-              <BulletPoint
-                key={desc}
-                text={desc}
-                icon={icon}
-                textClassName={classes.bulletPointGuaranteesText}
-                bulletClassName={classes.bulletPointGuarantees}
-              />
-            ))}
-          </ul>
+          <BulletPointList
+            list={GUARANTEES}
+            textClassName={classes.bulletPointGuaranteesText}
+            bulletClassName={classes.bulletPointGuarantees}
+          />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { BulletPoint } from '../BulletPoint';
+import { BulletPointList } from '../BulletPointList';
 
 import { FeatureTypes } from '../../types/features';
 import { useOnScreen } from '../../hooks/useOnScreen';
@@ -23,17 +23,11 @@ export const FeatureCard: React.FC<FeatureTypes> = ({
       </div>
       <h1 className={classes.featureTitle}>{title}</h1>
       <h2 className={classes.featureSubTitle}>{subTitle}</h2>
-      <ul>
-        {bullets.map(({ icon, desc }) => (
-          <BulletPoint
-            key={desc}
-            text={desc}
-            icon={icon}
-            textClassName={classes.bulletPointFeatureText}
-            bulletClassName={classes.bulletPointFeature}
-          />
-        ))}
-      </ul>
+      <BulletPointList
+        list={bullets}
+        textClassName={classes.bulletPointFeatureText}
+        bulletClassName={classes.bulletPointFeature}
+      />
     </section>
   );
 };

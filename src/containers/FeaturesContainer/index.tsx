@@ -35,9 +35,9 @@ const FEATURES_CONFIG = [
     title: 'Spyware detector',
     subTitle: 'Find apps secretly spying on you and your data.',
     bullets: [
-      { icon: ScanIcon, desc: 'Full background anti-spyware scan' },
-      { icon: AlertIcon, desc: 'Instant spyware detection alerts' },
-      { icon: ThreatIcon, desc: 'Immediate threat quarantining' },
+      { icon: ScanIcon, text: 'Full background anti-spyware scan' },
+      { icon: AlertIcon, text: 'Instant spyware detection alerts' },
+      { icon: ThreatIcon, text: 'Immediate threat quarantining' },
     ],
   },
   {
@@ -46,9 +46,9 @@ const FEATURES_CONFIG = [
     title: 'Tracker detector',
     subTitle: 'Discover who tracks your location to spy on you.',
     bullets: [
-      { icon: SecretIcon, desc: 'Stop being secretly tracked' },
-      { icon: LocationIcon, desc: 'Protect your real location' },
-      { icon: ControlIcon, desc: 'Control who sees your location' },
+      { icon: SecretIcon, text: 'Stop being secretly tracked' },
+      { icon: LocationIcon, text: 'Protect your real location' },
+      { icon: ControlIcon, text: 'Control who sees your location' },
     ],
   },
   {
@@ -57,9 +57,9 @@ const FEATURES_CONFIG = [
     title: 'Social media protection',
     subTitle: 'Easily prevent social media account hacks.',
     bullets: [
-      { icon: AccountsIcon, desc: 'See who uses your accounts' },
-      { icon: AccessIcon, desc: 'Revoke access for other users' },
-      { icon: LoginAlertIcon, desc: 'Get unauthorized login alerts' },
+      { icon: AccountsIcon, text: 'See who uses your accounts' },
+      { icon: AccessIcon, text: 'Revoke access for other users' },
+      { icon: LoginAlertIcon, text: 'Get unauthorized login alerts' },
     ],
   },
   {
@@ -68,9 +68,9 @@ const FEATURES_CONFIG = [
     title: 'Call recorder blocker',
     subTitle: 'Discover if someone records your calls and chats. ',
     bullets: [
-      { icon: HideRecordIcon, desc: 'Hide your call history and records' },
-      { icon: RevokeIcon, desc: 'Revoke sharing your contact list' },
-      { icon: SecretTextIcon, desc: 'Help secret texts remain secret' },
+      { icon: HideRecordIcon, text: 'Hide your call history and records' },
+      { icon: RevokeIcon, text: 'Revoke sharing your contact list' },
+      { icon: SecretTextIcon, text: 'Help secret texts remain secret' },
     ],
   },
   {
@@ -79,9 +79,9 @@ const FEATURES_CONFIG = [
     title: 'Screen recording detector',
     subTitle: 'Don’t let anyone access your phone screen.',
     bullets: [
-      { icon: ScreenRecordIcon, desc: 'Find out if your screen is being recorded' },
-      { icon: SilentRecordIcon, desc: 'Immediately stop silent recordings' },
-      { icon: CameraIcon, desc: 'Get alerts if your camera is in use' },
+      { icon: ScreenRecordIcon, text: 'Find out if your screen is being recorded' },
+      { icon: SilentRecordIcon, text: 'Immediately stop silent recordings' },
+      { icon: CameraIcon, text: 'Get alerts if your camera is in use' },
     ],
   },
 ];

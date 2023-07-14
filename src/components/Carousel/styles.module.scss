@@ -50,10 +50,18 @@
 
     .splide__arrow--prev {
       left: -6rem;
+
+      &:active {
+        box-shadow: none;
+      }
     }
 
     .splide__arrow--next {
       right: -6rem;
+
+      &:active {
+        box-shadow: none;
+      }
     }
 
     .splide__arrow:hover:not(:disabled) {

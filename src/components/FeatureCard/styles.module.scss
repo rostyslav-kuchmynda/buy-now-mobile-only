@@ -14,10 +14,11 @@
     width: 100%;
     border-radius: 1.4rem;
     margin-block-end: 3.5rem;
-    background: linear-gradient(180deg, rgba(230, 242, 254, 0.00) 0%, rgba(230, 242, 254, 0.90) 82.13%, #E6F2FE 100%);
 
     >img {
       height: 32rem;
+      mask-image: linear-gradient(to top, transparent 0%, $white 15%);
+
     }
   }
 
