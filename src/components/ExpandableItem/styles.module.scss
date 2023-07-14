@@ -44,14 +44,6 @@
     transition: all 200ms ease-in;
   }
 
-  .fakeItem {
-    width: 2.8rem;
-    height: 2.8rem;
-    flex-shrink: 0;
-
-    margin-inline-end: 0.9rem;
-  }
-
   .itemStepContent {
     display: flex;
     justify-content: center;
@@ -128,7 +120,7 @@
     }
 
     .MuiAccordion-region {
-      display: flex;
+      padding-inline-start: 3.7rem;
     }
   }
 }
