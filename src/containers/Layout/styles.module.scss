@@ -3,12 +3,12 @@
 .layoutBody {
   flex-grow: 1;
   position: relative;
-  -webkit-overflow-scrolling: touch;
 
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow-x: hidden;
+
 
   .footerBtnSpacing {
     margin-block-start: 4rem;

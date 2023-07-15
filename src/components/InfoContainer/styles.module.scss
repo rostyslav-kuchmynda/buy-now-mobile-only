@@ -3,7 +3,7 @@
 .infoContainerWrap {
   display: flex;
   flex-direction: column;
-  padding-block-start: 5.4rem;
+  padding-block-start: calc(5.4rem + var(--headerHeight));
   padding-inline: 2.4rem;
   background-color: $infoBgColor;
 

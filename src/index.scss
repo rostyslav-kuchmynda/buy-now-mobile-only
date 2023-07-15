@@ -17,6 +17,9 @@
 @import "scss/base";
 @import '@splidejs/react-splide/css';
 
+:root {
+  --headerHeight: 6.4rem;
+}
 
 * {
   box-sizing: border-box;
@@ -28,17 +31,13 @@ body {
   padding: 0;
   font-family: Moderat;
   font-weight: 400;
-  font-size: var(--fontSize, 10px);
+  font-size: 10px;
   background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   color: $darkFont;
-
-  >#root {
-    overflow: hidden;
-    height: 100vh;
-  }
+  scroll-padding-top: var(--headerHeight);
 
   ul {
     margin: 0;
