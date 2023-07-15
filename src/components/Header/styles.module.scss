@@ -1,14 +1,15 @@
 @import "../../scss/base";
 
 .header {
+  position: relative;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   transition: all 200ms ease-out;
+  height: var(--headerHeight);
 
   padding-block: 1.7rem;
   padding-inline: 2.4rem;
@@ -17,7 +18,9 @@
 
 
   .headerButton {
-    display: none;
+    position: absolute;
+    right: 2.4rem;
+    opacity: 0;
 
     padding-inline: 1.5rem;
     padding-block: 0.6rem;
@@ -32,11 +35,21 @@
   }
 
   .headerButtonVisible {
-    display: block;
+    opacity: 1;
     transition: all 200ms ease-out;
   }
 }
 
-.headerWithButton {
-  justify-content: center;
+.headerLogoPosition {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms ease;
+}
+
+.headerLogoWithButton {
+  transition: all 200ms ease;
+  position: absolute;
+  left: 2.4rem;
+  transform: translateX(0);
 }

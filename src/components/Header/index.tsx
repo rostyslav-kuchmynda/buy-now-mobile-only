@@ -12,8 +12,12 @@ export const Header: React.FC<{ onClick: () => void }> = ({ onClick }) => {
   const isButtonVisible = useTypedSelector(getIsButtonVisible);
 
   return (
-    <header className={cc([classes.header, { [classes.headerWithButton]: isButtonVisible }])}>
-      <img src={Main_logo} alt="Clario logo" />
+    <header className={classes.header}>
+      <img
+        src={Main_logo}
+        alt="Clario logo"
+        className={cc([classes.headerLogoPosition, { [classes.headerLogoWithButton]: !isButtonVisible }])}
+      />
       <Button
         onClick={onClick}
         label="Protect me now"
