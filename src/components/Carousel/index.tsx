@@ -2,8 +2,6 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import { ReviewCard } from '../ReviewCard';
 
-import { useWidthSize } from '../../hooks/useWidthResize';
-
 import classes from './styles.module.scss';
 
 import TrustPilotLogo from '../../images/icons/ReviewPlatforms/trustPilot.svg';
@@ -31,37 +29,33 @@ const CUSTOMER_REVIEWS = [
   },
 ];
 
-export const Carousel: React.FC = () => {
-  const layoutWidth = useWidthSize();
-
-  return (
-    <section className={classes.carouselWrap}>
-      <h1 className={classes.carouselHeader}>Let’s hear what real Clario users say.</h1>
-      <div id="splide-reviews" className={classes.carouselItemsContainer}>
-        <Splide
-          options={{
-            type: 'loop',
-            rewind: false,
-            padding: '1.2rem',
-            gap: '1.2rem',
-            pagination: false,
-            trimSpace: true,
-            arrows: true,
-            focus: 'center',
-            perPage: 1,
-            direction: 'ltr',
-            width: `${layoutWidth}px`,
-            autoWidth: true,
-            drag: false,
-          }}
-        >
-          {CUSTOMER_REVIEWS.map(({ platformIcon, review, name, color }) => (
-            <SplideSlide key={review}>
-              <ReviewCard platformIcon={platformIcon} review={review} name={name} color={color} />
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
-    </section>
-  );
-};
+export const Carousel: React.FC = () => (
+  <section className={classes.carouselWrap}>
+    <h1 className={classes.carouselHeader}>Let’s hear what real Clario users say.</h1>
+    <div id="splide-reviews" className={classes.carouselItemsContainer}>
+      <Splide
+        options={{
+          type: 'loop',
+          rewind: false,
+          padding: '1.2rem',
+          gap: '1.2rem',
+          pagination: false,
+          trimSpace: true,
+          arrows: true,
+          focus: 'center',
+          perPage: 1,
+          direction: 'ltr',
+          width: '320px',
+          autoWidth: true,
+          drag: false,
+        }}
+      >
+        {CUSTOMER_REVIEWS.map(({ platformIcon, review, name, color }) => (
+          <SplideSlide key={review}>
+            <ReviewCard platformIcon={platformIcon} review={review} name={name} color={color} />
+          </SplideSlide>
+        ))}
+      </Splide>
+    </div>
+  </section>
+);
