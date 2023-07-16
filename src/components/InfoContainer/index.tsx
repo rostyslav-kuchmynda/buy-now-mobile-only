@@ -34,7 +34,9 @@ export const InfoContainer: React.FC<InfoContainerType> = ({
 }) => {
   const dispatch = useTypedDispatch();
 
-  const [visible, setRef] = useOnScreen({ threshold: 0.1 });
+  const [visible, setRef] = useOnScreen({
+    rootMargin: '-64px 0px 0px 0px',
+  });
 
   useEffect(() => {
     dispatch(uiIsButtonVisible(visible && subTitle));
