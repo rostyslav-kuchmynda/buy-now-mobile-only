@@ -32,7 +32,7 @@ const CUSTOMER_REVIEWS = [
 ];
 
 export const Carousel: React.FC = () => {
-  const width = useCarouselWidth(320, 480);
+  const width = useCarouselWidth(320, 1000);
 
   return (
     <section className={classes.carouselWrap}>

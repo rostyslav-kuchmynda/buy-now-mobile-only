@@ -19,3 +19,8 @@ export type BulletPointListTypes = {
   bulletClassName?: string;
   defaultIcon?: boolean;
 };
+
+export type RefHandler = {
+  headingRef: HTMLHeadingElement | null;
+  subscriptionRef: HTMLDivElement | null;
+};

@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SetStateAction, Dispatch } from 'react';
 
-export const useOnScreen = (options?: IntersectionObserverInit): [boolean, any] => {
+export const useOnScreen = (
+  options?: IntersectionObserverInit
+): [boolean, Dispatch<SetStateAction<Element | null>>] => {
   const [ref, setRef] = useState<Element | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -8,7 +10,6 @@ export const useOnScreen = (options?: IntersectionObserverInit): [boolean, any] 
     const observer = new IntersectionObserver(([entry]) => {
       setVisible(entry.isIntersecting);
     }, options);
-
     if (ref) observer.observe(ref);
 
     return () => {

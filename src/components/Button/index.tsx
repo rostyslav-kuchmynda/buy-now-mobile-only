@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, MutableRefObject } from 'react';
+import { ButtonHTMLAttributes, Dispatch, MutableRefObject, SetStateAction } from 'react';
 import cc from 'classcat';
 
 import classes from './styles.module.scss';
@@ -7,7 +7,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: string;
   label?: React.ReactNode;
   tabIndex?: number;
-  setRef?: MutableRefObject<null | HTMLButtonElement>;
+  setRef?: Dispatch<SetStateAction<Element | null>> | MutableRefObject<null | HTMLButtonElement>;
   ariaLabel?: string;
 };
 

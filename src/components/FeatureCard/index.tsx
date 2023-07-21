@@ -4,6 +4,7 @@ import { FeatureTypes } from '../../types/features';
 import { useOnScreen } from '../../hooks/useOnScreen';
 
 import classes from './styles.module.scss';
+import { useEffect } from 'react';
 
 export const FeatureCard: React.FC<FeatureTypes> = ({
   illustration,
@@ -12,9 +13,11 @@ export const FeatureCard: React.FC<FeatureTypes> = ({
   title,
   subTitle,
 }) => {
-  const [visible, setRef] = useOnScreen({ threshold: 1 });
+  const [visible, setRef] = useOnScreen({ threshold: 0.5 }); //Kind a way to fix the IntersectionObs on device rotation
 
-  if (visible) console.log('Feature Shown', title);
+  useEffect(() => {
+    if (visible) console.log('Feature Shown', title);
+  }, [title, visible]);
 
   return (
     <section className={classes.featureCardWrap} ref={setRef}>
