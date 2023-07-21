@@ -3,6 +3,7 @@
 .expandableItemWrap {
   width: 24rem;
 
+
   .resetStylesMU {
     border: none;
     box-shadow: none;
@@ -74,25 +75,24 @@
       font-size: 1.6rem;
       font-weight: 700;
       line-height: 2.2rem;
+      z-index: 2;
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-left: 0.1rem dotted $darkFont;
+        top: 0.1rem;
+        right: 50%;
+        bottom: 0.1rem;
+        height: 83%;
+        transform: scale(1, 2);
+        transform-origin: 50% -120%;
+        z-index: 1;
+      }
+
+
     }
 
-    // .itemStep:after {
-    //   content: ' ';
-    //   position: absolute;
-    //   border-left: 0.1rem dotted $darkFont;
-    //   top: 0.1rem;
-    //   right: 50%;
-    //   bottom: 0.1rem;
-    //   left: 50%;
-    //   height: 90%;
-    //   width: 0.1rem;
-    //   transform: scale(1, 2);
-    //   transform-origin: 50% -106%;
-    // }
-
-    // &:last-child .itemStep::after {
-    //   display: none;
-    // }
 
     >p {
       margin: 0;
@@ -121,6 +121,15 @@
 
     .MuiAccordion-region {
       padding-inline-start: 3.7rem;
+    }
+  }
+}
+
+.expandableItemWrap {
+  &:last-child {
+    .itemStep:after {
+      display: none;
+      z-index: 2;
     }
   }
 }
